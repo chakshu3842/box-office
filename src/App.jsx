@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/starred" element={<Starred />} />
+
         <Route path="*" element={<div> Bhg ja </div>} />
       </Routes>
     </BrowserRouter>
