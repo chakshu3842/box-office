@@ -1,5 +1,5 @@
 const Starred = () => {
-  return <div>good morning</div>;
+  return <div>Starred</div>;
 };
 
 export default Starred;
