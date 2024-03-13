@@ -28,7 +28,11 @@ const Home = () => {
     }
 
     if (apiData?.length === 0) {
-      return <div>No results</div>;
+      return (
+        <div>
+          No <b>results</b>
+        </div>
+      );
     }
 
     if (apiData) {
