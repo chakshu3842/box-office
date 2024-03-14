@@ -11,16 +11,15 @@ const ShowCard = ({ name, image, id, summary, onStarMeClick, isStarred }) => {
   const starBtnRef = useRef();
   const handleStarClick = () => {
     onStarMeClick(id);
+    const starBtnEl = starBtnRef.current;
+    if (!starBtnEl) return;
+
+    if (isStarred) {
+      starBtnEl.classList.remove('animate');
+    } else {
+      starBtnEl.classList.add('animate');
+    }
   };
-  const starBtnEl = starBtnRef.current;
-  if (!starBtnEl) return;
-
-  if (isStarred) {
-    starBtnEl.classList.remove('animate');
-  } else {
-    starBtnEl.classList.add('animate');
-  }
-
   return (
     <SearchCard>
       <SearchImgWrapper>
